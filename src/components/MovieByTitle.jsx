@@ -1,7 +1,7 @@
 import useFetch from "../useFetch"
 
 const MovieByTitle = ({title}) => {
-    const {data, loading, error} = useFetch(`https://z47vcc-3000.csb.app/movies/${title}`)
+    const {data, loading, error} = useFetch(`http://localhost:3000/movies/${title}`)
 
     return (        
         data ? (
