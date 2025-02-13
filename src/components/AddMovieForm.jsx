@@ -29,7 +29,7 @@ const AddMovieForm = () => {
         console.log(e)
         e.preventDefault()
         try{
-            const response = await fetch('http://localhost:3000/movies/', {
+            const response = await fetch('https://movie-vault-be.vercel.app/movies/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/JSON'
