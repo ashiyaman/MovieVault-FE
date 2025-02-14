@@ -18,7 +18,6 @@ const AddMovieForm = () => {
 
     const handleChange = (e) => {
         const {name, value} = e.target
-        console.log(name)
         setFormData((prevData) => ({
             ...prevData,
             [name]: name === 'releaseDate' ||  name === 'rating' ? parseInt(value) : value
@@ -26,7 +25,6 @@ const AddMovieForm = () => {
     }
 
     const handleSubmit = async(e) => {
-        console.log(e)
         e.preventDefault()
         try{
             const response = await fetch('https://movie-vault-be.vercel.app/movies/', {
@@ -51,51 +49,51 @@ const AddMovieForm = () => {
         <div>
             <h2>Add New Movie</h2>
             <form onSubmit={handleSubmit}>
-                <label hmlFor='title'>Title: </label><br/>
+                <label htmlFor='title'>Title: </label><br/>
                 <input type='text' name='title' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='releaseYear'>Release Year: </label><br/>
+                <label htmlFor='releaseYear'>Release Year: </label><br/>
                 <input type='text' name='releaseYear' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='genre'>Genre: </label><br/>
+                <label htmlFor='genre'>Genre: </label><br/>
                 <input type='text' name='genre' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='director'>Director: </label><br/>
+                <label htmlFor='director'>Director: </label><br/>
                 <input type='text' name='director' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='actor'>Actor: </label><br/>
+                <label htmlFor='actor'>Actor: </label><br/>
                 <input type='text' name='actor' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='language'>Language: </label><br/>
+                <label htmlFor='language'>Language: </label><br/>
                 <input type='text' name='language' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='country'>Country: </label><br/>
+                <label htmlFor='country'>Country: </label><br/>
                 <input type='text' name='country' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='rating'>Rating: </label><br/>
+                <label htmlFor='rating'>Rating: </label><br/>
                 <input type='text' name='rating' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='plot'>Plot: </label><br/>
+                <label htmlFor='plot'>Plot: </label><br/>
                 <textarea name='plot' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='awards'>Awards: </label><br/>
+                <label htmlFor='awards'>Awards: </label><br/>
                 <input type='text' name='awards' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='trailerUrl'>Trailer URL: </label><br/>
+                <label htmlFor='trailerUrl'>Trailer URL: </label><br/>
                 <input type='text' name='trailerUrl' onChange={handleChange}/>
                 <br/>
                 <br/>
-                <label hmlFor='posterUrl'>Poster URL: </label><br/>
+                <label htmlFor='posterUrl'>Poster URL: </label><br/>
                 <input type='text' name='posterurl' onChange={handleChange}/>
                 <br/>
                 <br/>
